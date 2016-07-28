@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "description": "A heavily opinionated wrapper around react-docgen.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jondlm/anx-docgen.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "test": "mocha index.spec.js",
     "test-tdd": "mocha index.spec.js -w"
