@@ -1,6 +1,6 @@
 {
   "name": "anx-docgen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A heavily opinionated wrapper around react-docgen.",
   "main": "index.js",
   "repository": {
