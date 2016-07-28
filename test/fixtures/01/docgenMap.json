@@ -1,0 +1,253 @@
+{
+  "Banner": {
+    "description": "A basic Banner. Any props that are not explicitly called out below will be\npassed through to the native `Banner` component.\n\nShort single line content can be passed in as a simple string. Multi line\nmessages should be passed wrapped in a `<p>` tag.\n\nIt is valid to use `strong` or `em` within a `Banner` message.",
+    "displayName": "Banner",
+    "methods": [],
+    "isPrivateComponent": false,
+    "props": {
+      "hasIcon": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Pass in a bool to display predefined icon based on `kind`.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "icon": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": "Pass in a icon component for custom icons within `Banner`.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "isCloseable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set this to `true` if you want to have a `x` close icon.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "hasRoundedCorners": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Set this value to `false` if you want to remove the rounded corners on\nthe `Banner`.  **default is `true`**",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Class names that are appended to the defaults."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Any valid React children."
+      },
+      "kind": {
+        "type": {
+          "name": "enum",
+          "value": [{
+            "value": "'primary'",
+            "computed": false
+          }, {
+            "value": "'success'",
+            "computed": false
+          }, {
+            "value": "'warning'",
+            "computed": false
+          }, {
+            "value": "'danger'",
+            "computed": false
+          }, {
+            "value": "'info'",
+            "computed": false
+          }, {
+            "value": "'default'",
+            "computed": false
+          }]
+        },
+        "required": false,
+        "description": "Style variations of the `Banner`.",
+        "defaultValue": {
+          "value": "'default'",
+          "computed": false
+        }
+      },
+      "isSmall": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If set to `true` the banner have smaller padding on the inside.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "onClose": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Called when the user closes the `Banner`.\n\nSignature: `({ event, props }) => {}`",
+        "defaultValue": {
+          "value": "_.noop",
+          "computed": true
+        }
+      },
+      "isClosed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Controls the visibility of the `Banner`."
+      }
+    },
+    "childComponents": [],
+    "customData": {
+      "categories": ["communication"],
+      "madeFrom": ["DangerIcon", "InfoIcon", "SuccessIcon", "WarningIcon"]
+    }
+  },
+  "Button": {
+    "description": "A basic button. Any props that are not explicitly called out below will be\npassed through to the native `button` component.",
+    "displayName": "Button",
+    "methods": [],
+    "isPrivateComponent": false,
+    "props": {
+      "isDisabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "disables the button by greying it out",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "isActive": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "activates the button by giving it a \"pressed down\" look",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "class names that are appended to the defaults"
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [{
+            "name": "node"
+          }, {
+            "name": "arrayOf",
+            "value": {
+              "name": "node"
+            }
+          }]
+        },
+        "required": false,
+        "description": "any valid React children"
+      },
+      "kind": {
+        "type": {
+          "name": "enum",
+          "value": [{
+            "value": "'primary'",
+            "computed": false
+          }, {
+            "value": "'link'",
+            "computed": false
+          }, {
+            "value": "'success'",
+            "computed": false
+          }, {
+            "value": "'warning'",
+            "computed": false
+          }, {
+            "value": "'danger'",
+            "computed": false
+          }, {
+            "value": "'info'",
+            "computed": false
+          }]
+        },
+        "required": false,
+        "description": "style variations of the button"
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [{
+            "value": "'short'",
+            "computed": false
+          }, {
+            "value": "'small'",
+            "computed": false
+          }, {
+            "value": "'large'",
+            "computed": false
+          }]
+        },
+        "required": false,
+        "description": "size variations of the button"
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Called when the user clicks the `Button`.\n\nSignature: `({ event, props }) => {}`",
+        "defaultValue": {
+          "value": "_.noop",
+          "computed": true
+        }
+      },
+      "type": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "form element type variations of button. Defaults to 'button' to avoid being triggered by 'Enter' anywhere on the page. Passed through to DOM button.",
+        "defaultValue": {
+          "value": "'button'",
+          "computed": false
+        }
+      }
+    },
+    "childComponents": [],
+    "customData": {
+      "categories": ["controls", "buttons"]
+    }
+  }
+}

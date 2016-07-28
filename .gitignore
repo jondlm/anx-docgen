@@ -1,0 +1,10 @@
+# Npm
+npm-debug.log*
+node_modules
+
+# Vim
+**/*.swp
+**/*.swo
+
+# IntelliJ
+.idea
