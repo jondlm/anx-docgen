@@ -178,7 +178,7 @@ function fromPaths(paths) {
 			});
 
 			if (!doc.description) {
-				return new Error('Missing a description from ' + path + ' - please put a comment block right above `createClass` and make sure to include the proper JSON blob in it.')
+				return new Error(`Missing a description from ${path} - please put a comment block right above 'createClass' and make sure to include the proper JSON blob in it.`)
 			}
 
 			// Pull out the custom json that should be in the description of every module
@@ -188,13 +188,13 @@ function fromPaths(paths) {
 			doc.description = doc.description.replace(/\{.*\}/, '').trim();
 
 			if (!customJson) {
-				return new Error('Unable to find JSON in the description for %s. Every component must have JSON is in header with `categories` at minimum.', path);
+				return new Error(`Unable to find JSON in the description for ${path}. Every component must have JSON is in header with 'categories' at minimum.`);
 			}
 
 			try {
 				doc.customData = JSON.parse(customJson);
 			} catch(e) {
-				return new Error('Unable to parse JSON from the description of ' + path);
+				return new Error(`Unable to parse JSON from the description of ${path}`);
 			}
 
 			return _.set(acc, componentName, doc);
