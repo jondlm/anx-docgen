@@ -104,7 +104,7 @@ function fromPaths(paths) {
 						return recast.visit(definition, {
 							visitObjectExpression: function (path) {
 								const isPrivateComponent = _.chain(path.get('properties').value)
-									.find(_.matchesProperty('key.name', '_lucidIsPrivate'))
+									.find(_.matchesProperty('key.name', '_isPrivate'))
 									.get('value.value', false)
 									.value();
 								documentation.set('isPrivateComponent', isPrivateComponent);
