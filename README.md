@@ -1,8 +1,8 @@
 # anx-docgen
 
-This is a small utility, powered by [react-docgen][dg], library
-that we use to power our React component library documentation.
-It's highly opinionated so your mileage may vary.
+This is a small utility, powered by [react-docgen][dg], library that we use to
+power our React component library documentation. It's highly opinionated so
+your mileage may vary.
 
 ## Usage
 

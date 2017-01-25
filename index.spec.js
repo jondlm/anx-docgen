@@ -1,19 +1,15 @@
 const anxDocgen = require('./index');
-const assert = require('assert');
-const fs = require('fs');
 
 describe('anxDocgen', () => {
 	describe('#fromPaths', () => {
-		it('should correctly parse 01 set of fixtures', (done) => {
-			var expectedDocgenMap = JSON.parse(fs.readFileSync('./test/fixtures/01/docgenMap.json', 'utf8'));
-
-			anxDocgen.fromPaths([
+		it('should correctly parse 01 set of fixtures', () => {
+			return anxDocgen.fromPaths([
 				'./test/fixtures/01/Banner.jsx',
 				'./test/fixtures/01/Button.jsx',
+				'./test/fixtures/01/Accordion.jsx',
 			]).then((docgenMap) => {
-				assert.deepEqual(docgenMap, expectedDocgenMap);
-				done();
-			}).catch(done);
+				return expect(docgenMap).toMatchSnapshot();
+			});
 		});
 	});
 });

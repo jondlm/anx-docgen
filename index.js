@@ -37,7 +37,11 @@ function fromPaths(paths) {
 
 					recast.visit(ast, {
 						visitExportDefaultDeclaration: function(path) {
-							exportName = path.value.declaration.name;
+							const namedDefaultExport = _.get(path, 'value.declaration.name');
+							// A hacky way to detect the export name of a buildHybridComponent export
+							const hybridDefaultExport = _.get(path, 'value.declaration.arguments[0].name');
+
+							exportName = namedDefaultExport || hybridDefaultExport;
 							return false;
 						},
 					});

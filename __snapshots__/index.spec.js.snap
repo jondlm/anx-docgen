@@ -1,0 +1,393 @@
+exports[`anxDocgen #fromPaths should correctly parse 01 set of fixtures 1`] = `
+Object {
+  "Accordion": Object {
+    "childComponents": Array [
+      Object {
+        "componentRef": "ExpanderPanel.Header",
+        "description": "",
+        "displayName": "Header",
+      },
+    ],
+    "customData": Object {
+      "categories": Array [
+        "layout",
+      ],
+      "madeFrom": Array [
+        "ExpanderPanel",
+      ],
+    },
+    "description": "This is a container that renders panels and controls its expansion/retraction.",
+    "displayName": "Accordion",
+    "isPrivateComponent": false,
+    "methods": Array [
+      Object {
+        "docblock": null,
+        "modifiers": Array [],
+        "name": "handleToggle",
+        "params": Array [
+          Object {
+            "name": "isExpanded",
+            "optional": undefined,
+            "type": null,
+          },
+          Object {
+            "name": "index",
+            "optional": undefined,
+            "type": null,
+          },
+          Object {
+            "name": "event",
+            "optional": undefined,
+            "type": null,
+          },
+        ],
+        "returns": null,
+      },
+    ],
+    "props": Object {
+      "Header": Object {
+        "description": "prop alternative to Header child component
+passed through to the underlying ExpanderPanel",
+        "required": false,
+        "type": Object {
+          "name": "any",
+        },
+      },
+      "className": Object {
+        "description": "Appended to the component-specific class names set on the root
+element.",
+        "required": false,
+        "type": Object {
+          "name": "string",
+        },
+      },
+      "onSelect": Object {
+        "defaultValue": Object {
+          "computed": true,
+          "value": "_.noop",
+        },
+        "description": "Called when the user clicks on the component\'s header of an item.
+
+Signature: \`(itemIndex, { event, props }) => {}\`",
+        "required": false,
+        "type": Object {
+          "name": "func",
+        },
+      },
+      "selectedIndex": Object {
+        "description": "Indicates which item is expanded.",
+        "required": false,
+        "type": Object {
+          "name": "number",
+        },
+      },
+      "style": Object {
+        "description": "Passed through to the root element.",
+        "required": false,
+        "type": Object {
+          "name": "object",
+        },
+      },
+    },
+  },
+  "Accordion.Header": Object {
+    "componentRef": "ExpanderPanel.Header",
+    "description": "",
+    "displayName": "Header",
+  },
+  "Banner": Object {
+    "childComponents": Array [],
+    "customData": Object {
+      "categories": Array [
+        "communication",
+      ],
+      "madeFrom": Array [
+        "DangerIcon",
+        "InfoIcon",
+        "SuccessIcon",
+        "WarningIcon",
+      ],
+    },
+    "description": "A basic Banner. Any props that are not explicitly called out below will be
+passed through to the native \`Banner\` component.
+
+Short single line content can be passed in as a simple string. Multi line
+messages should be passed wrapped in a \`<p>\` tag.
+
+It is valid to use \`strong\` or \`em\` within a \`Banner\` message.",
+    "displayName": "Banner",
+    "isPrivateComponent": false,
+    "methods": Array [],
+    "props": Object {
+      "children": Object {
+        "description": "Any valid React children.",
+        "required": false,
+        "type": Object {
+          "name": "node",
+        },
+      },
+      "className": Object {
+        "description": "Class names that are appended to the defaults.",
+        "required": false,
+        "type": Object {
+          "name": "string",
+        },
+      },
+      "hasIcon": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "false",
+        },
+        "description": "Pass in a bool to display predefined icon based on \`kind\`.",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "hasRoundedCorners": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Set this value to \`false\` if you want to remove the rounded corners on
+the \`Banner\`.  **default is \`true\`**",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "icon": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "null",
+        },
+        "description": "Pass in a icon component for custom icons within \`Banner\`.",
+        "required": false,
+        "type": Object {
+          "name": "element",
+        },
+      },
+      "isCloseable": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "true",
+        },
+        "description": "Set this to \`true\` if you want to have a \`x\` close icon.",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "isClosed": Object {
+        "description": "Controls the visibility of the \`Banner\`.",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "isSmall": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "false",
+        },
+        "description": "If set to \`true\` the banner have smaller padding on the inside.",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "kind": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "\'default\'",
+        },
+        "description": "Style variations of the \`Banner\`.",
+        "required": false,
+        "type": Object {
+          "name": "enum",
+          "value": Array [
+            Object {
+              "computed": false,
+              "value": "\'primary\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'success\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'warning\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'danger\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'info\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'default\'",
+            },
+          ],
+        },
+      },
+      "onClose": Object {
+        "defaultValue": Object {
+          "computed": true,
+          "value": "_.noop",
+        },
+        "description": "Called when the user closes the \`Banner\`.
+
+Signature: \`({ event, props }) => {}\`",
+        "required": false,
+        "type": Object {
+          "name": "func",
+        },
+      },
+    },
+  },
+  "Button": Object {
+    "childComponents": Array [],
+    "customData": Object {
+      "categories": Array [
+        "controls",
+        "buttons",
+      ],
+    },
+    "description": "A basic button. Any props that are not explicitly called out below will be
+passed through to the native \`button\` component.",
+    "displayName": "Button",
+    "isPrivateComponent": false,
+    "methods": Array [],
+    "props": Object {
+      "children": Object {
+        "description": "any valid React children",
+        "required": false,
+        "type": Object {
+          "name": "union",
+          "value": Array [
+            Object {
+              "name": "node",
+            },
+            Object {
+              "name": "arrayOf",
+              "value": Object {
+                "name": "node",
+              },
+            },
+          ],
+        },
+      },
+      "className": Object {
+        "description": "class names that are appended to the defaults",
+        "required": false,
+        "type": Object {
+          "name": "string",
+        },
+      },
+      "isActive": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "false",
+        },
+        "description": "activates the button by giving it a \"pressed down\" look",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "isDisabled": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "false",
+        },
+        "description": "disables the button by greying it out",
+        "required": false,
+        "type": Object {
+          "name": "bool",
+        },
+      },
+      "kind": Object {
+        "description": "style variations of the button",
+        "required": false,
+        "type": Object {
+          "name": "enum",
+          "value": Array [
+            Object {
+              "computed": false,
+              "value": "\'primary\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'link\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'success\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'warning\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'danger\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'info\'",
+            },
+          ],
+        },
+      },
+      "onClick": Object {
+        "defaultValue": Object {
+          "computed": true,
+          "value": "_.noop",
+        },
+        "description": "Called when the user clicks the \`Button\`.
+
+Signature: \`({ event, props }) => {}\`",
+        "required": false,
+        "type": Object {
+          "name": "func",
+        },
+      },
+      "size": Object {
+        "description": "size variations of the button",
+        "required": false,
+        "type": Object {
+          "name": "enum",
+          "value": Array [
+            Object {
+              "computed": false,
+              "value": "\'short\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'small\'",
+            },
+            Object {
+              "computed": false,
+              "value": "\'large\'",
+            },
+          ],
+        },
+      },
+      "type": Object {
+        "defaultValue": Object {
+          "computed": false,
+          "value": "\'button\'",
+        },
+        "description": "form element type variations of button. Defaults to \'button\' to avoid being triggered by \'Enter\' anywhere on the page. Passed through to DOM button.",
+        "required": false,
+        "type": Object {
+          "name": "string",
+        },
+      },
+    },
+  },
+}
+`;
